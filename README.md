@@ -8,7 +8,8 @@ written in c# (VERSION 10)
 
 With the latest .NET versions and c# , most of the functions are implicit ,
 making it easier to code and straightforward. which is why in my sample ,
-it goes straight to the cojsole output rather than stating all the codes that areused to be written prior 
+it goes straight to the console output rather than stating all the codes that are used to be written prior versions 
+eg using System ; etc 
 
 
 To run this:
@@ -24,4 +25,4 @@ then dotnet run to start this application
 program exits after service user enters name and its sorted
 you'll have to do 'dotnet run' again to start this application
 
-i could have added a loop that could keep asking users to enter names and their sortedacommand to exit but it wasnt required
+
