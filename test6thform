@@ -1,4 +1,0 @@
-Console.WriteLine("What is your name?");
-var str = Console.ReadLine();
-
-Console.WriteLine("Hello there, " + str);
