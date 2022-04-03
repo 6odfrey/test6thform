@@ -7,8 +7,12 @@
 // str = textInfo.ToTitleCase(str); 
 // Console.WriteLine(" " + str); //Hello there, Tim Jamesdotnet run
 
-/* this commented section could also carry out the job but doesnt take into 
+/* this commented section above could also carry out the job but doesnt take into 
 account capitalized letters in the mnames per se. it however corrects the first names*/
+
+
+
+//Below is another example, here The idea is to only capitalize characters that are preceded by whitespace. pretty simple way but fun to tinker with 
 
 
 Console.WriteLine("What is your name?"); //Asks user name
