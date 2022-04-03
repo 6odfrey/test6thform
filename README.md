@@ -2,9 +2,12 @@
 
 
 
+
 This is  simple program that is run in the console 
 ensure .NET 6.0 is available 
 written in c# (VERSION 10)
+
+THE MAIN PROGRAM FILE IS Program.cs
 
 With the latest .NET versions and c# , most of the functions are implicit ,
 making it easier to code and straightforward. which is why in my sample ,
