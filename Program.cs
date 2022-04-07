@@ -1,29 +1,35 @@
 ﻿// See https://aka.ms/new-console-template for more information
-// using System.Globalization;
-// Console.WriteLine("What is your name?");
-// var str = Console.ReadLine();
-
-// TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
-// str = textInfo.ToTitleCase(str); 
-// Console.WriteLine(" " + str); //Hello there, Tim Jamesdotnet run
-
-/* this commented section could also carry out the job but doesnt take into 
-account capitalized letters in the names per se. it however corrects the first letter of  names*/
-
-//Below is another example, here The idea is to only capitalize characters that are preceded by whitespace. pretty simple way but fun to tinker with
 
 
-Console.WriteLine("What is your name?"); //Asks user name
-var input = Console.ReadLine();                 //takes input
+namespace ConsoleApp
+{
+        class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("What is your name?");
+            
+            var input = Console.ReadLine();
+            
+            // if input is empty, print the error
+            if (string.IsNullOrEmpty(input))
+            {
+                Console.WriteLine("Empty Name, Rerun Program!");
+            }
+            else //do everything else if the input is not empty 
+            {
+
 var output = "";                    //declared output 
 var thisChar = ' ';                     // char is a built-in value type that represents one character in a string
 var shouldCapitalize = true;
 
+
+
+
+
  bool IsMcName(string output, int index, char currentChar) => index > 0 && // for names like Mc 
         char.ToLower(currentChar) == 'c' &&
         output[index - 1] == 'M';
-
-
 
 for (int i = 0; i < input!.Length; i++) //! used here to avoid the null warning during compiling, executes a block of statement
 {       
@@ -62,7 +68,14 @@ for (int i = 0; i < input!.Length; i++) //! used here to avoid the null warning 
 
 
 
-Console.WriteLine("" + output); //output of the sorted name goes here 
+Console.WriteLine("" + output); //output of the sorted name goes here   
+            }
+        }
+
+        
+    }
+}
+
 
     
 
