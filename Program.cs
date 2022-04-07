@@ -7,12 +7,10 @@
 // str = textInfo.ToTitleCase(str); 
 // Console.WriteLine(" " + str); //Hello there, Tim Jamesdotnet run
 
-/* this commented section above could also carry out the job but doesnt take into 
-account capitalized letters in the mnames per se. it however corrects the first names*/
+/* this commented section could also carry out the job but doesnt take into 
+account capitalized letters in the names per se. it however corrects the first letter of  names*/
 
-
-
-//Below is another example, here The idea is to only capitalize characters that are preceded by whitespace. pretty simple way but fun to tinker with 
+//Below is another example, here The idea is to only capitalize characters that are preceded by whitespace. pretty simple way but fun to tinker with
 
 
 Console.WriteLine("What is your name?"); //Asks user name
@@ -21,11 +19,18 @@ var output = "";                    //declared output
 var thisChar = ' ';                     // char is a built-in value type that represents one character in a string
 var shouldCapitalize = true;
 
-for (int i = 0; i < input!.Length; i++) //! used here to avoid the null warning during compiling
-{
+ bool IsMcName(string output, int index, char currentChar) => index > 0 && // for names like Mc 
+        char.ToLower(currentChar) == 'c' &&
+        output[index - 1] == 'M';
+
+
+
+for (int i = 0; i < input!.Length; i++) //! used here to avoid the null warning during compiling, executes a block of statement
+{       
     thisChar = input[i];
 
-    if (char.IsWhiteSpace(thisChar))    //This method is used to check whether a specified Unicode character can be categorized as a whitespace character or not. If it can be categorized as whitespace then it returns True otherwise return False.
+    if (char.IsWhiteSpace(thisChar) || !char.IsLetter(thisChar))  //This method checks whitespace 
+    //and sees if its characters are not letters eg -,' so can apply to Irish names like O'brien = O'Brien 
     {
         shouldCapitalize = true;
     }
@@ -37,15 +42,27 @@ for (int i = 0; i < input!.Length; i++) //! used here to avoid the null warning 
             shouldCapitalize = false;
         }
         else
-        {
-            thisChar = char.ToLower(thisChar);
-        }
+{
+    if (IsMcName(output, i, thisChar))
+    {
+        shouldCapitalize = true;
     }
+
+    thisChar = char.ToLower(thisChar);
+}
+    
+    }
+    
+ 
+    
 
     output += thisChar;
 }
 
-Console.WriteLine("" + output);
+
+
+
+Console.WriteLine("" + output); //output of the sorted name goes here 
 
     
 
