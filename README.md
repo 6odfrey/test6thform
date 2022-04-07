@@ -7,6 +7,14 @@ This is  simple program that is run in the console
 ensure .NET 6.0 is available 
 written in c# (VERSION 10)
 
+Test cases uses
+Helen-moss = Helen-Moss
+Colin o'brien = Colin O'Brien 
+Helen mcdonald = Helen McDonald 
+
+
+
+
 THE MAIN PROGRAM FILE IS Program.cs
 
 With the latest .NET versions and c# , most of the functions are implicit ,
